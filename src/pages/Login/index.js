@@ -24,9 +24,10 @@ const Login = ({navigation}) => {
             password: password // diambil dari state diatas
         }
 
-        navigation.navigate('Home', {
-            data
-        })
+        let request = await axios.post('https://admin-people-care.rrrgho.com/api/login', data)
+        if(request){
+            alert(request.data.message)
+        }
     }
 
     return (

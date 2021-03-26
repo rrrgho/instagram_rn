@@ -19,15 +19,12 @@ const Login = ({navigation}) => {
 
     // Send API
     const sendLogin = async () => {
-        let data = {
-            email : email, // diambil dari state diatas
-            password: password // diambil dari state diatas
-        }
+        // let data = {
+        //     email : email, // diambil dari state diatas
+        //     password: password // diambil dari state diatas
+        // }
 
-        let request = await axios.post('https://admin-people-care.rrrgho.com/api/login', data)
-        if(request){
-            alert(request.data.message)
-        }
+        navigation.navigate('Home')
     }
 
     return (
